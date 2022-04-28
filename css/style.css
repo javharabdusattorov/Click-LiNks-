@@ -19,7 +19,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 50px;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(190, 190, 190);
 }
 
 /* ScrollBar */
@@ -36,16 +36,26 @@ body {
     top: 0;
     box-shadow: 0 0 35px 6px crimson;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.nav {
+    width: 100%;
+    max-width: 1353px;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0 0 35px 6px crimson;
 }
 
 .nav ul {
     display: flex;
-}
-
-.nav ul.active {
-    max-height: 20rem;
-    padding: 1.5rem;
+    justify-content: space-between;
 }
 
 .nav ul a {
@@ -64,18 +74,13 @@ body {
 .menu__btn {
     background-color: transparent;
     border: none;
-    overflow: hidden;
-    position: absolute;
-    top: 33px;
-    right: 13px;
+    outline: none;
 }
 
-.menu__btn img {
-    width: 49px;
-    height: 48px;
-    object-fit: cover;
-    overflow: hidden;
-    max-height: 0;
+.menu__btn i {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 .link {
@@ -154,20 +159,13 @@ body {
     .bottom {
         top: 83px;
     }
-    
-    .menu__btn img {
-        max-height: 4rem;
-    }
 
-    .nav {
-        padding: 48px 15px;
+    .nav {  
+        padding: 25px;
     }
 
     .nav ul {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.2s ease-in-out;
+        flex-direction: column;
     }
 
     .nav ul a {

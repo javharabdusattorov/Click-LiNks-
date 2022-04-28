@@ -1,6 +1,17 @@
 $(function() {
     let elLink = $('.nav a');
     $('.top').hide();
+    $('.menu__btn').hide();
+
+    if($(window).width() <= 678){
+        $('.menu__btn').show();
+        $('.nav ul li').hide();
+
+        $('.menu__btn').on('click', function() {
+            $('.nav ul li').slideToggle(300);
+        })
+    }
+
     elLink.on('click', function(em) {
         em.preventDefault();
         elLink.removeClass('active');
